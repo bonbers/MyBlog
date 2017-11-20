@@ -1,0 +1,8 @@
+romain_blog_crud:
+    resource: "@RomainBlogBundle/Controller/CrudController.php"
+    type:     annotation
+
+romain_blog:
+    resource: "@RomainBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

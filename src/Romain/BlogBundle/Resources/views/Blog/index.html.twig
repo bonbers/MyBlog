@@ -1,0 +1,26 @@
+{% extends "RomainBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block romainblog_body %}
+
+  <h2>Liste des annonces</h2>
+
+        <ul>
+    {% for crud in cruds %}
+      <li>
+        <a href="{{ path('crud_show', {'id': crud.id}) }}">
+          {{ crud.title }}
+        </a>
+        par {{ crud.author }},
+        le {{ crud.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas d'annonces</li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}
