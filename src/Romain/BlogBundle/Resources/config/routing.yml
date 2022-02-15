@@ -1,3 +1,0 @@
-romain_blog_homepage:
-    path:     /
-    defaults: { _controller: RomainBlogBundle:Annonce:index }
